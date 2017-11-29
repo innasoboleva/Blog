@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head_title %} Contact me | {{ block.super }} {% endblock head_title %}
+
+{% block content %}
+<div class="row nav-detail">
+    <nav>
+        <div class="row">
+            <ul class="main-nav js--main-nav">
+                <li><a href="{% url 'posts:list' %}">Back</a></li>
+            </ul>
+            <a class='mobile-nav-icon js--nav-icon'><i class='ion-navicon-round'></i></a>
+        </div>
+    </nav>
+</div>
+<div class="row section-contact">
+    <div class="row contact">
+
+       <h2>Happy to hear from you</h2>
+        <p>
+        e-mail: <a href="mailto:chugunova.inna.1@gmail.com?subject=Hi" id="link">chugunova.inna.1@gmail.com</a>
+        </p>
+
+    </div>
+</div>
+<div class="pic-toll">
+
+    {% for object in object_list %}
+        {% if object.image %}
+            <img src="{{ object.image.url }}">
+        {% endif %}
+    {% endfor %}
+
+</div>
+
+{% endblock content %}

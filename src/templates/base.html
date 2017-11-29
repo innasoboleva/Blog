@@ -1,0 +1,68 @@
+{% load static %}
+<!--DOCTYPE html -->
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/grid.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/animate1.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style1.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/queries.css' %}">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100' rel='stylesheet' type='text/css'>
+
+        <title>
+            {% block head_title %}
+            INNA'S BLOG
+            {% endblock head_title %}
+        </title>
+        <style>
+            {% block style %}
+            {% endblock style %}
+        </style>
+    </head>
+
+    <body>
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+            {% block content %}
+            {% endblock content %}
+    <footer>
+        <div class="row">
+            <p> Copyright &nbsp;&copy; &nbsp;2017 by Inna Soboleva. &nbsp;&nbsp;All rights reserved.
+            </p>
+            <li><a href="https://www.instagram.com/innachugunova/"> <img src="{% static 'css/instagram-icon.png' %}" alt="instagram-icon"> </a>
+            </li>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/g/respond@1.4.2,selectivizr@1.0.3b,html5shiv@3.7.3"></script>
+    <script>
+
+
+        function myFunction() {
+        var z = document.getElementById("myB");
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+            z.style.margin = "0 0 40px 0";
+            x.style.display = "block";
+
+        } else {
+            x.style.display = "none";
+            z.style.margin = "0 0 0 0";
+        }
+        }
+
+
+    </script>
+    </body>
+</html>
+
+
+
