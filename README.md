@@ -1,2 +1,4 @@
 # Blog
-django based blog
+Django based blog.
+
+Requires installation of Django and Pillow.
