@@ -26,7 +26,7 @@ with open(S_values) as f:
     SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
@@ -128,7 +128,8 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [
-    ("css", os.path.join(os.path.dirname(BASE_DIR), "static_cdn", "css"))
+    ("css", os.path.join(os.path.dirname(BASE_DIR), "static_cdn", "css")),
+    ("admin", os.path.join(os.path.dirname(BASE_DIR), "static_cdn", "vendors", "admin"))
 ]
 
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
